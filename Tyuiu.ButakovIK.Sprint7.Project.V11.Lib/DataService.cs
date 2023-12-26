@@ -20,10 +20,10 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11.Lib
 
             using (var reader = new StreamReader(filePath))
             {
-                // Пропускаем заголовок
+                
                 reader.ReadLine();
 
-                // Считаем оставшиеся строки
+                
                 while (reader.ReadLine() != null)
                 {
                     lineCount++;
