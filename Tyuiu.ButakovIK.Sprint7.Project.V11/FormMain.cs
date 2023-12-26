@@ -182,13 +182,13 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
 
         private void dataGridViewTable_BIK_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            int rowCount = ((DataGridView)sender).RowCount;
+            int rowCount = ((DataGridView)sender).RowCount-1;
             this.textBoxAmountEmployee_BIK.Text = rowCount.ToString();
         }
 
         private void dataGridViewTable_BIK_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            int rowCount = ((DataGridView)sender).RowCount;
+            int rowCount = ((DataGridView)sender).RowCount-1;
             this.textBoxAmountEmployee_BIK.Text = rowCount.ToString();
         }
 
@@ -209,11 +209,6 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.chartData_BIK.Series.Add(series);
         }
 
-        private void buttonSort_BIK_Click(object sender, EventArgs e)
-        {
-            string sorting_column = this.comboBoxFilter_BIK.Text;
-            SortDataGridViewColumn(dataGridViewTable_BIK, sorting_column, true);
-        }
 
         public void SortDataGridViewColumn(DataGridView dataGridView, string columnName, bool ascending)
         {
@@ -229,7 +224,8 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
 
         public void FilterDataGridView(DataTable dataTable, string columnName, string filterValue)
         {
-            dataTable.DefaultView.RowFilter = string.Format("{0} LIKE '%{1}%'", columnName, filterValue);
+            if (dataTable.Columns.Contains(columnName))
+                    dataTable.DefaultView.RowFilter = string.Format("Convert([{0}], System.String) LIKE '%{1}%'", columnName, filterValue);
         }
 
         private void textBoxFilter_BIK_TextChanged(object sender, EventArgs e)
@@ -241,5 +237,16 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             
         }
 
+        private void ToolStripMenuItemAboutElem_BIK_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
+
+        private void ToolStripMenuItemTipElem_BIK_Click(object sender, EventArgs e)
+        {
+            FormTip formTip = new FormTip();
+            formTip.ShowDialog();
+        }
     }
 }

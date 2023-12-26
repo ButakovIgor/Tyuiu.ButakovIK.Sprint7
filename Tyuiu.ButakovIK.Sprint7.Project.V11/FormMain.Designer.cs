@@ -29,9 +29,9 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStripPanel_BIK = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemFile_BIK = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCreateFile_BIK = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,8 +56,6 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.textBoxAmountEmployee_BIK = new System.Windows.Forms.TextBox();
             this.comboBoxFilter_BIK = new System.Windows.Forms.ComboBox();
             this.buttonChart_BIK = new System.Windows.Forms.Button();
-            this.buttonDeleteRowData_BIK = new System.Windows.Forms.Button();
-            this.buttonAddData_BIK = new System.Windows.Forms.Button();
             this.groupBoxData_BIK = new System.Windows.Forms.GroupBox();
             this.textBoxJobTitle_BIK = new System.Windows.Forms.TextBox();
             this.dateTimePickerBirthday_BIK = new System.Windows.Forms.DateTimePicker();
@@ -69,7 +67,9 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.labelAdress_BIK = new System.Windows.Forms.Label();
             this.labelPatronymic_BIK = new System.Windows.Forms.Label();
             this.labelName_BIK = new System.Windows.Forms.Label();
+            this.buttonDeleteRowData_BIK = new System.Windows.Forms.Button();
             this.labelSurname_BIK = new System.Windows.Forms.Label();
+            this.buttonAddData_BIK = new System.Windows.Forms.Button();
             this.textBoxSubunit_BIK = new System.Windows.Forms.TextBox();
             this.textBoxZP_BIK = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber_BIK = new System.Windows.Forms.TextBox();
@@ -199,6 +199,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.ToolStripMenuItemTipElem_BIK.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.ToolStripMenuItemTipElem_BIK.Size = new System.Drawing.Size(186, 22);
             this.ToolStripMenuItemTipElem_BIK.Text = "Подсказка";
+            this.ToolStripMenuItemTipElem_BIK.Click += new System.EventHandler(this.ToolStripMenuItemTipElem_BIK_Click);
             // 
             // ToolStripMenuItemAboutElem_BIK
             // 
@@ -207,45 +208,38 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.ToolStripMenuItemAboutElem_BIK.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.ToolStripMenuItemAboutElem_BIK.Size = new System.Drawing.Size(186, 22);
             this.ToolStripMenuItemAboutElem_BIK.Text = "О программе";
+            this.ToolStripMenuItemAboutElem_BIK.Click += new System.EventHandler(this.ToolStripMenuItemAboutElem_BIK_Click);
             // 
             // panelLeft_BIK
             // 
             this.panelLeft_BIK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelLeft_BIK.Controls.Add(this.textBoxFilter_BIK);
-            this.panelLeft_BIK.Controls.Add(this.labelRow_BIK);
-            this.panelLeft_BIK.Controls.Add(this.labelHours_BIK);
-            this.panelLeft_BIK.Controls.Add(this.textBoxRows_BIK);
-            this.panelLeft_BIK.Controls.Add(this.textBoxHours_BIK);
-            this.panelLeft_BIK.Controls.Add(this.buttonAddHours_BIK);
             this.panelLeft_BIK.Controls.Add(this.labelAmountEmployee_BIK);
             this.panelLeft_BIK.Controls.Add(this.textBoxAmountEmployee_BIK);
             this.panelLeft_BIK.Controls.Add(this.comboBoxFilter_BIK);
             this.panelLeft_BIK.Controls.Add(this.buttonChart_BIK);
-            this.panelLeft_BIK.Controls.Add(this.buttonDeleteRowData_BIK);
-            this.panelLeft_BIK.Controls.Add(this.buttonAddData_BIK);
             this.panelLeft_BIK.Controls.Add(this.groupBoxData_BIK);
             this.panelLeft_BIK.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_BIK.Location = new System.Drawing.Point(0, 24);
             this.panelLeft_BIK.Name = "panelLeft_BIK";
-            this.panelLeft_BIK.Size = new System.Drawing.Size(200, 752);
+            this.panelLeft_BIK.Size = new System.Drawing.Size(200, 771);
             this.panelLeft_BIK.TabIndex = 1;
             // 
             // textBoxFilter_BIK
             // 
             this.textBoxFilter_BIK.AccessibleDescription = "";
             this.textBoxFilter_BIK.AccessibleName = "";
-            this.textBoxFilter_BIK.Location = new System.Drawing.Point(9, 602);
+            this.textBoxFilter_BIK.Location = new System.Drawing.Point(11, 657);
             this.textBoxFilter_BIK.Name = "textBoxFilter_BIK";
             this.textBoxFilter_BIK.Size = new System.Drawing.Size(176, 20);
             this.textBoxFilter_BIK.TabIndex = 13;
             this.textBoxFilter_BIK.Tag = "";
             this.textBoxFilter_BIK.TextChanged += new System.EventHandler(this.textBoxFilter_BIK_TextChanged);
-            
             // 
             // labelRow_BIK
             // 
             this.labelRow_BIK.AutoSize = true;
-            this.labelRow_BIK.Location = new System.Drawing.Point(110, 632);
+            this.labelRow_BIK.Location = new System.Drawing.Point(101, 458);
             this.labelRow_BIK.Name = "labelRow_BIK";
             this.labelRow_BIK.Size = new System.Drawing.Size(46, 13);
             this.labelRow_BIK.TabIndex = 12;
@@ -254,7 +248,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // labelHours_BIK
             // 
             this.labelHours_BIK.AutoSize = true;
-            this.labelHours_BIK.Location = new System.Drawing.Point(14, 632);
+            this.labelHours_BIK.Location = new System.Drawing.Point(6, 458);
             this.labelHours_BIK.Name = "labelHours_BIK";
             this.labelHours_BIK.Size = new System.Drawing.Size(38, 13);
             this.labelHours_BIK.TabIndex = 11;
@@ -262,21 +256,21 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // 
             // textBoxRows_BIK
             // 
-            this.textBoxRows_BIK.Location = new System.Drawing.Point(110, 651);
+            this.textBoxRows_BIK.Location = new System.Drawing.Point(104, 474);
             this.textBoxRows_BIK.Name = "textBoxRows_BIK";
             this.textBoxRows_BIK.Size = new System.Drawing.Size(75, 20);
             this.textBoxRows_BIK.TabIndex = 10;
             // 
             // textBoxHours_BIK
             // 
-            this.textBoxHours_BIK.Location = new System.Drawing.Point(14, 651);
+            this.textBoxHours_BIK.Location = new System.Drawing.Point(6, 474);
             this.textBoxHours_BIK.Name = "textBoxHours_BIK";
             this.textBoxHours_BIK.Size = new System.Drawing.Size(75, 20);
             this.textBoxHours_BIK.TabIndex = 9;
             // 
             // buttonAddHours_BIK
             // 
-            this.buttonAddHours_BIK.Location = new System.Drawing.Point(14, 677);
+            this.buttonAddHours_BIK.Location = new System.Drawing.Point(7, 500);
             this.buttonAddHours_BIK.Name = "buttonAddHours_BIK";
             this.buttonAddHours_BIK.Size = new System.Drawing.Size(173, 23);
             this.buttonAddHours_BIK.TabIndex = 8;
@@ -288,7 +282,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // 
             this.labelAmountEmployee_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelAmountEmployee_BIK.AutoSize = true;
-            this.labelAmountEmployee_BIK.Location = new System.Drawing.Point(42, 729);
+            this.labelAmountEmployee_BIK.Location = new System.Drawing.Point(42, 748);
             this.labelAmountEmployee_BIK.Name = "labelAmountEmployee_BIK";
             this.labelAmountEmployee_BIK.Size = new System.Drawing.Size(108, 13);
             this.labelAmountEmployee_BIK.TabIndex = 7;
@@ -297,7 +291,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // textBoxAmountEmployee_BIK
             // 
             this.textBoxAmountEmployee_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxAmountEmployee_BIK.Location = new System.Drawing.Point(14, 706);
+            this.textBoxAmountEmployee_BIK.Location = new System.Drawing.Point(14, 725);
             this.textBoxAmountEmployee_BIK.Name = "textBoxAmountEmployee_BIK";
             this.textBoxAmountEmployee_BIK.ReadOnly = true;
             this.textBoxAmountEmployee_BIK.Size = new System.Drawing.Size(171, 20);
@@ -306,7 +300,6 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // 
             // comboBoxFilter_BIK
             // 
-            this.comboBoxFilter_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxFilter_BIK.FormattingEnabled = true;
             this.comboBoxFilter_BIK.Items.AddRange(new object[] {
             "Фамилия",
@@ -319,7 +312,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             "Дата рождения",
             "Должность",
             "Отработанные часы"});
-            this.comboBoxFilter_BIK.Location = new System.Drawing.Point(10, 573);
+            this.comboBoxFilter_BIK.Location = new System.Drawing.Point(12, 630);
             this.comboBoxFilter_BIK.Name = "comboBoxFilter_BIK";
             this.comboBoxFilter_BIK.Size = new System.Drawing.Size(175, 21);
             this.comboBoxFilter_BIK.TabIndex = 4;
@@ -328,7 +321,8 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // buttonChart_BIK
             // 
             this.buttonChart_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonChart_BIK.Location = new System.Drawing.Point(9, 531);
+            this.buttonChart_BIK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonChart_BIK.Location = new System.Drawing.Point(14, 683);
             this.buttonChart_BIK.Name = "buttonChart_BIK";
             this.buttonChart_BIK.Size = new System.Drawing.Size(176, 36);
             this.buttonChart_BIK.TabIndex = 3;
@@ -336,34 +330,18 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.buttonChart_BIK.UseVisualStyleBackColor = true;
             this.buttonChart_BIK.Click += new System.EventHandler(this.buttonChart_BIK_Click);
             // 
-            // buttonDeleteRowData_BIK
-            // 
-            this.buttonDeleteRowData_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDeleteRowData_BIK.Location = new System.Drawing.Point(10, 502);
-            this.buttonDeleteRowData_BIK.Name = "buttonDeleteRowData_BIK";
-            this.buttonDeleteRowData_BIK.Size = new System.Drawing.Size(175, 23);
-            this.buttonDeleteRowData_BIK.TabIndex = 2;
-            this.buttonDeleteRowData_BIK.Text = "Удалить строку";
-            this.buttonDeleteRowData_BIK.UseVisualStyleBackColor = true;
-            this.buttonDeleteRowData_BIK.Click += new System.EventHandler(this.buttonDeleteRowData_BIK_Click);
-            // 
-            // buttonAddData_BIK
-            // 
-            this.buttonAddData_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAddData_BIK.Location = new System.Drawing.Point(10, 473);
-            this.buttonAddData_BIK.Name = "buttonAddData_BIK";
-            this.buttonAddData_BIK.Size = new System.Drawing.Size(175, 23);
-            this.buttonAddData_BIK.TabIndex = 1;
-            this.buttonAddData_BIK.Text = "Добавить данные";
-            this.buttonAddData_BIK.UseVisualStyleBackColor = true;
-            this.buttonAddData_BIK.Click += new System.EventHandler(this.buttonAddData_BIK_Click);
-            // 
             // groupBoxData_BIK
             // 
             this.groupBoxData_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxData_BIK.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBoxData_BIK.Controls.Add(this.textBoxJobTitle_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.buttonAddHours_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.textBoxRows_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.labelRow_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.textBoxHours_BIK);
             this.groupBoxData_BIK.Controls.Add(this.dateTimePickerBirthday_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.labelHours_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelJobTitle_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelBirthday_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelSubunit_BIK);
@@ -372,7 +350,9 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.groupBoxData_BIK.Controls.Add(this.labelAdress_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelPatronymic_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelName_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.buttonDeleteRowData_BIK);
             this.groupBoxData_BIK.Controls.Add(this.labelSurname_BIK);
+            this.groupBoxData_BIK.Controls.Add(this.buttonAddData_BIK);
             this.groupBoxData_BIK.Controls.Add(this.textBoxSubunit_BIK);
             this.groupBoxData_BIK.Controls.Add(this.textBoxZP_BIK);
             this.groupBoxData_BIK.Controls.Add(this.textBoxPhoneNumber_BIK);
@@ -382,7 +362,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.groupBoxData_BIK.Controls.Add(this.textBoxSurname_BIK);
             this.groupBoxData_BIK.Location = new System.Drawing.Point(3, 3);
             this.groupBoxData_BIK.Name = "groupBoxData_BIK";
-            this.groupBoxData_BIK.Size = new System.Drawing.Size(190, 464);
+            this.groupBoxData_BIK.Size = new System.Drawing.Size(190, 621);
             this.groupBoxData_BIK.TabIndex = 0;
             this.groupBoxData_BIK.TabStop = false;
             this.groupBoxData_BIK.Text = "Ввод данных:";
@@ -473,6 +453,17 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.labelName_BIK.TabIndex = 10;
             this.labelName_BIK.Text = "Имя сотрудника:";
             // 
+            // buttonDeleteRowData_BIK
+            // 
+            this.buttonDeleteRowData_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonDeleteRowData_BIK.Location = new System.Drawing.Point(7, 592);
+            this.buttonDeleteRowData_BIK.Name = "buttonDeleteRowData_BIK";
+            this.buttonDeleteRowData_BIK.Size = new System.Drawing.Size(175, 23);
+            this.buttonDeleteRowData_BIK.TabIndex = 2;
+            this.buttonDeleteRowData_BIK.Text = "Удалить строку";
+            this.buttonDeleteRowData_BIK.UseVisualStyleBackColor = true;
+            this.buttonDeleteRowData_BIK.Click += new System.EventHandler(this.buttonDeleteRowData_BIK_Click);
+            // 
             // labelSurname_BIK
             // 
             this.labelSurname_BIK.AutoSize = true;
@@ -481,6 +472,17 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.labelSurname_BIK.Size = new System.Drawing.Size(120, 13);
             this.labelSurname_BIK.TabIndex = 9;
             this.labelSurname_BIK.Text = "Фамилия сотрудника:";
+            // 
+            // buttonAddData_BIK
+            // 
+            this.buttonAddData_BIK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAddData_BIK.Location = new System.Drawing.Point(9, 563);
+            this.buttonAddData_BIK.Name = "buttonAddData_BIK";
+            this.buttonAddData_BIK.Size = new System.Drawing.Size(175, 23);
+            this.buttonAddData_BIK.TabIndex = 1;
+            this.buttonAddData_BIK.Text = "Добавить данные";
+            this.buttonAddData_BIK.UseVisualStyleBackColor = true;
+            this.buttonAddData_BIK.Click += new System.EventHandler(this.buttonAddData_BIK_Click);
             // 
             // textBoxSubunit_BIK
             // 
@@ -561,23 +563,23 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.panelFill_BIK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFill_BIK.Location = new System.Drawing.Point(200, 300);
             this.panelFill_BIK.Name = "panelFill_BIK";
-            this.panelFill_BIK.Size = new System.Drawing.Size(931, 476);
+            this.panelFill_BIK.Size = new System.Drawing.Size(931, 495);
             this.panelFill_BIK.TabIndex = 3;
             // 
             // chartData_BIK
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartData_BIK.ChartAreas.Add(chartArea6);
+            chartArea3.Name = "ChartArea1";
+            this.chartData_BIK.ChartAreas.Add(chartArea3);
             this.chartData_BIK.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.chartData_BIK.Legends.Add(legend6);
+            legend3.Name = "Legend1";
+            this.chartData_BIK.Legends.Add(legend3);
             this.chartData_BIK.Location = new System.Drawing.Point(0, 0);
             this.chartData_BIK.Name = "chartData_BIK";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartData_BIK.Series.Add(series6);
-            this.chartData_BIK.Size = new System.Drawing.Size(929, 474);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartData_BIK.Series.Add(series3);
+            this.chartData_BIK.Size = new System.Drawing.Size(929, 493);
             this.chartData_BIK.TabIndex = 0;
             this.chartData_BIK.Text = "chart1";
             // 
@@ -594,7 +596,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 776);
+            this.ClientSize = new System.Drawing.Size(1131, 795);
             this.Controls.Add(this.splitterTopFill_BIK);
             this.Controls.Add(this.panelFill_BIK);
             this.Controls.Add(this.panelTop_BIK);
@@ -602,7 +604,9 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.Controls.Add(this.menuStripPanel_BIK);
             this.MinimumSize = new System.Drawing.Size(1147, 745);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отдел кадров";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStripPanel_BIK.ResumeLayout(false);
             this.menuStripPanel_BIK.PerformLayout();
             this.panelLeft_BIK.ResumeLayout(false);
