@@ -61,6 +61,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.ClientSize = new System.Drawing.Size(947, 256);
             this.Controls.Add(this.buttonOk_BIK);
             this.Controls.Add(this.labelTip_BIK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTip";
             this.Text = "Подсказка";
             this.ResumeLayout(false);

@@ -171,11 +171,11 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
                     return;
                 if(ds.Rows[row_index - 1]["Отработанные часы"] != null)
                 {
-                    ds.Rows[row_index-1]["Отработанные часы"] = int.Parse(ds.Rows[row_index - 1]["Отработанные часы"].ToString()) + hours_number;
+                    ds.Rows[row_index - 1]["Отработанные часы"] = int.Parse(ds.Rows[row_index - 1]["Отработанные часы"].ToString()) + hours_number;
                 }
                 else
                 {
-                    ds.Rows[row_index - 1]["Отработанные часы"] = hours_number;
+                    ds.Rows[row_index]["Отработанные часы"] = hours_number;
                 }
             }
         }

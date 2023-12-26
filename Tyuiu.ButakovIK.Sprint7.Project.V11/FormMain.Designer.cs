@@ -29,9 +29,10 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStripPanel_BIK = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemFile_BIK = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCreateFile_BIK = new System.Windows.Forms.ToolStripMenuItem();
@@ -294,7 +295,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.textBoxAmountEmployee_BIK.Location = new System.Drawing.Point(14, 725);
             this.textBoxAmountEmployee_BIK.Name = "textBoxAmountEmployee_BIK";
             this.textBoxAmountEmployee_BIK.ReadOnly = true;
-            this.textBoxAmountEmployee_BIK.Size = new System.Drawing.Size(171, 20);
+            this.textBoxAmountEmployee_BIK.Size = new System.Drawing.Size(176, 20);
             this.textBoxAmountEmployee_BIK.TabIndex = 6;
             this.textBoxAmountEmployee_BIK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -568,17 +569,17 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             // 
             // chartData_BIK
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartData_BIK.ChartAreas.Add(chartArea3);
+            chartArea4.Name = "ChartArea1";
+            this.chartData_BIK.ChartAreas.Add(chartArea4);
             this.chartData_BIK.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartData_BIK.Legends.Add(legend3);
+            legend4.Name = "Legend1";
+            this.chartData_BIK.Legends.Add(legend4);
             this.chartData_BIK.Location = new System.Drawing.Point(0, 0);
             this.chartData_BIK.Name = "chartData_BIK";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartData_BIK.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartData_BIK.Series.Add(series4);
             this.chartData_BIK.Size = new System.Drawing.Size(929, 493);
             this.chartData_BIK.TabIndex = 0;
             this.chartData_BIK.Text = "chart1";
@@ -602,6 +603,7 @@ namespace Tyuiu.ButakovIK.Sprint7.Project.V11
             this.Controls.Add(this.panelTop_BIK);
             this.Controls.Add(this.panelLeft_BIK);
             this.Controls.Add(this.menuStripPanel_BIK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1147, 745);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
